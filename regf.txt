@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REGISTRATION PAGE</title>
+<style>
+h1{
+text-align:center;
+color:BLACK;
+text-decorat
+}
+body{
+margin:50px;
+background-color:HOTPINK;
+
+}
+.f1container{
+display:flex;
+flex-direction:column;
+background-color:CYAN;
+width:40%;
+border:10px groove YELLOW;
+padding:15px;
+margin:auto;
+}
+.item{
+padding:7px;
+margin:7px;
+}
+.item:hover{
+background-color:BROWN;
+}
+.bt{
+background-color:IVORY;
+width:30%
+}
+ 
+</style>
+</head>
+<body>
+<h1 >REGISTRATION PAGE</h1>
+<form name="f1" action="" method="post">
+<div class="f1container">
+   <div>
+  <label class="item">USERNAME:</label>
+  <input type="text" name="t1" class="item">
+
+</div>
+<div>
+   <label class="item">PASSWORD:</label>
+   <input type="password" name="t2" class="item">
+</div>
+<div>
+   <label class="item">RETYPE-PASSWORD:</label>
+   <input type="password" name="t3" class="item">
+</div>
+<div>
+   <label class="item">MOBILE:</label>
+   <input type="text" name="t4" maxlength=10 class="item">
+</div>
+<div>
+   <label class="item">EMAIL:</label>
+   <input type="email" name="t5" class="item">
+</div>
+<div>
+   <label class="item">GENDER:</label>
+   <input type="radio" name="g" value="male" class="item">Male
+       <input type="radio" name="g" value="female" class="item">Female
+</div>
+<div>
+   <label class="item">ADDRESS:</label>
+   <textarea rows="2" cols="10" name="t6" class="item">
+   </textarea>
+   </div>
+<div>
+
+   <label class="item">STATE:</label>
+   <select name="s">
+       <option>select state</option>
+       <option>value="telangana">TELANGANA</option>
+       <option>value="andhrapradesh">ANDHRAPRADESH</option>
+       </select>
+    </div>
+<div>
+
+   <label class="item">CITY:</label>
+   <select name="c">
+       <option>select city</option>
+       <option>value="hyderabad">HYDERABAD</option>
+       <option>value="vizag">VIZAG</option>
+       </select>
+    </div>
+<div>
+   <label class="item">ZIP CODE</label>
+   <input type="text" name="t7" class="item" >
+</div>
+<div>
+   <label class="item">INSERT IMAGE:</label>
+   <input type="file" name="file1" class="item" >
+</div>
+<div>
+    <input type="checkbox" name="agree" >I AGREE T&C
+</div>
+<div>
+    <input type="submit" value="SUBMIT" class="item bt">
+   <input type="reset" value="CLEAR" class="item bt" >
+</div>
+</div>
+</form>
+</body>
+</html>

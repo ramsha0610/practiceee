@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function getData(){
+                cname=document.getElementById("c").value;
+                url=https://restcountries.com/v3.1/name/${cname}?fullText=true
+                fetch(url)
+                .then(response=>response.json())
+                .then(data=>{
+                    console.log(data);
+                    document.write("capital:"+data[0].capital[0]);
+            })
+            .catch(error=>{
+                console.log(error);
+            });
+            }
+        </script>
+    </head>
+    <body>
+        Enter full country Name:<input type="text" id="c">
+        <button onclick="getData()">Get Data</button>
+    </body>
+</html>

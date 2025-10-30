@@ -1,0 +1,43 @@
+import java.sql.*;
+import java.util.Scanner;
+
+class Update {
+    public static void main(String ar[]) {
+        try {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter employee ID:");
+            int i = Integer.parseInt(sc.nextLine());
+
+            System.out.println("Enter name, designation, department, salary to be updated:");
+            String n = sc.nextLine();
+            String d = sc.nextLine();
+            String p = sc.nextLine();
+            float s = sc.nextFloat();
+
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection con = DriverManager.getConnection(
+                "jdbc:oracle:thin:@localhost:1521/XE", "system", "cseds"
+            );
+
+            String q = "UPDATE employee76 SET ename=?, designation=?, department=?, salary=? WHERE eid=?";
+            PreparedStatement ps = con.prepareStatement(q);
+            ps.setString(1, n);
+            ps.setString(2, d);
+            ps.setString(3, p);
+            ps.setFloat(4, s);
+            ps.setInt(5, i);
+
+            int count = ps.executeUpdate();
+            if (count == 0) {
+                System.out.println("No employee record found");
+            } else {
+                System.out.println("Record updated successfully");
+            }
+
+            ps.close();
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}

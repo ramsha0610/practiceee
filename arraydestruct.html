@@ -1,0 +1,33 @@
+<html>
+<head>
+<script>
+	const arr1=[10,20,30,40,50,60,70];
+	let [a,b]=arr1;
+	document.write("<br>Value of a:"+a);
+	document.write("<br>Value of b:"+b);
+	let [x,y,z]=arr1;
+	document.write("<br>Value of x:"+x);
+	document.write("<br>Value of y:"+y);
+	document.write("<br>Value of z:"+z);
+	let[ ,c, ,d,,...r]=arr1;
+	document.write("<br>Value of c:"+c);
+	document.write("<br>Value of d:"+d);
+	document.write("<br>Value of r:"+r);
+	const calc=function(n1,n2){
+		s=n1+n2;
+		d=n1-n2;
+		p=n1*n2;
+		q=n1/n2;
+		return [s,d,p,q];
+	}
+	let [sum, , pro]=calc(15,5);
+	document.write("<br>Sum:"+sum);
+	document.write("<br>Product"+pro);
+	const arr2=[5,25];
+	let [a1,b1,c1]=arr2;
+	document.write("<br>Value of a1:"+a1);
+	document.write("<br>Value of b1:"+b1);
+	document.write("<br>Value of c1:"+c1);
+</script>
+</head>
+</html>

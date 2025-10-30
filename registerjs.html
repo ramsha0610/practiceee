@@ -1,0 +1,196 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REGISTRATION PAGE</title>
+<style>
+h1{
+text-align:center;
+color:BLACK;
+}
+body{
+margin:50px;
+background-color:ivory;
+}
+.f1container{
+display:flex;
+flex-direction:column;
+background-color:CYAN;
+width:40%;
+border:10px groove YELLOW;
+padding:15px;
+margin:auto;
+}
+.item{
+padding:7px;
+margin:7px;
+}
+.item:hover{
+background-color:BROWN;
+}
+.bt{
+background-color:IVORY;
+width:30%
+}
+</style>
+<script>
+function validate(){
+u = document.getElementById("usr").value;
+p = document.getElementById("pwd").value;
+rp = document.getElementById("rpwd").value;
+mail = document.getElementById("mail").value;
+mb = document.getElementById("mb").value;
+add = document.getElementById("add").value;
+b = document.getElementById("b").value;
+st = document.getElementById("st").value;
+city = document.getElementById("city").value;
+zip = document.getElementById("zip").value;
+tc =  document.getElementById("tc").value;
+mexp=/^[0-9]{10}$/;
+if(u=="")
+{
+alert("enter username");
+return false;
+}
+else if(p=="")
+{
+alert("enter password");
+return false;
+}
+else if(p.length<6){
+alert("password must contain minimum of 6 characters");
+return false;
+}
+else if(rp==""){
+alert("fill retype-password");
+return false;
+}
+else if(p!=rp){
+alert("password and retype-password must be same");
+return false;
+}
+else if(mexp.test(mb)==false)
+{
+alert("mobile number should only contain 10 digits");
+return false;
+}
+else if(mail=="")
+{
+alert("please enter mail");
+return false;
+}
+else if(b=="")
+{
+alert("enter dob");
+return false;
+}
+else if(document.getElementById("m").checked==false && document.getElementById("f").checked==false)
+{
+alert("please select your gender");
+return false;
+}
+else if(add=="")
+{
+alert("please enter address");
+return false;
+}
+else if(document.getElementById("st").selectedIndex==0)
+{
+alert("please select state");
+}
+else if(document.getElementById("city").selectedIndex==0)
+{
+alert("please select city");
+}
+else if(zip=="")
+{
+alert("enter zipcode");
+return false;
+}
+else if(document.getElementById("tc").checked==false)
+{
+alert("read and agree to t&c");
+return false;
+}
+else
+{
+alert("validation successful");
+return true;
+}
+}
+</script>
+</head>
+<body>
+<h1 >REGISTRATION PAGE</h1>
+<form action="" method="post" onsubmit="return validate()">
+<div class="f1container">
+   <div>
+  <label class="item">USERNAME:</label>
+  <input type="text" name="t1" class="item" id= "usr" >
+
+</div>
+<div>
+   <label class="item">PASSWORD:</label>
+   <input type="password" name="t2" class="item" id= "pwd">
+</div>
+<div>
+   <label class="item">RETYPE-PASSWORD:</label>
+   <input type="password" name="t3" class="item" id= "rpwd">
+</div>
+<div>
+   <label class="item">MOBILE:</label>
+   <input type="text" name="t4" maxlength=10 class="item" id= "mb">
+</div>
+<div>
+   <label class="item">EMAIL:</label>
+   <input type="email" name="t5" class="item" id= "mail">
+</div>
+<div>
+<label>DATE OF BIRTH:</label></td>
+<input type="date" name="dob" id="b"></td>
+</div>
+<div>
+   <label class="item">GENDER:</label>
+   <input type="radio" name="g" value="male" class="item" id= "m">Male
+       <input type="radio" name="g" value="female" class="item" id= "f">Female
+</div>
+<div>
+   <label class="item">ADDRESS:</label>
+   <textarea rows="2" cols="10" name="t6" class="item" id="add"></textarea>
+   </div>
+<div>
+
+   <label class="item">STATE:</label>
+   <select name="s" id="st">
+       <option>select state</option>
+       <option value="telangana">TELANGANA</option>
+       <option value="andhrapradesh">ANDHRAPRADESH</option>
+       </select>
+    </div>
+<div>
+
+   <label class="item">CITY:</label>
+   <select name="c" id="city">
+       <option>select city</option>
+       <option value="hyderabad">HYDERABAD</option>
+       <option value="vizag">VIZAG</option>
+       </select>
+    </div>
+<div>
+   <label class="item">ZIP CODE</label>
+   <input type="text" name="t7" class="item" id="zip" >
+</div>
+<div>
+   <label class="item">INSERT IMAGE:</label>
+   <input type="file" name="file1" class="item" >
+</div>
+<div>
+    <input type="checkbox" name="agree" id="tc" >I AGREE T&C
+</div>
+<div>
+    <input type="submit" value="SUBMIT" class="item bt">
+   <input type="reset" value="CLEAR" class="item bt" >
+</div>
+</div>
+</form>
+</body>
+</html>

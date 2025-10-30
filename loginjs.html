@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width ,intial-scale=1.0">
+<style>
+body{
+background-color:ivory;
+padding:17%;
+}
+form{
+padding:5%;
+background-color: #ffb3d9;
+border-radius:20px;
+height:50%;
+}
+h2{
+color:red;
+font-family:"sans-serif";
+}
+label{
+color:brown;
+font-style:normal;
+font-size:15px;
+}
+input{
+border-radius:15px;
+}
+</style>
+<script>
+function validate()
+{
+let u=document.getElementById("usr").value;
+let p=document.getElementById("pwd").value;
+let uexp=/^[a-zA-Z@_.]+$/;
+if(u=="")	
+{
+alert("enter username");
+return false;
+}
+else if(p=="")
+{
+alert("enter password");
+return false;
+}
+else if(p.length<6)
+{
+alert("password must contain minimum of 6 characters");
+return false;
+}
+else if(uexp.test(u)==false)
+{
+alert("username can only contain a-z,A-Z,@,_,.");
+return false;
+}
+else
+{
+alert("validation successful");
+return true;
+}
+}
+</script>
+</head>
+<body>
+<h2 align="center">LOGIN PAGE</h2>
+<form action ="" method ="post" onsubmit="return validate()">
+<table border=0 cellpadding="15" align="center">
+<tr>
+<td><label> USERNAME:</label></td>
+<td><input type ="text" name="field1" id="usr"/></td>
+</tr>
+<tr>
+<td><label>PASSWORD:</label></td>
+<td><input type ="password" name="field2" id="pwd"/></td>
+</tr>
+<tr>
+<td><input type="submit" value="SUBMIT"></TD>
+<td align=center><input type="reset" value="CLEAR"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

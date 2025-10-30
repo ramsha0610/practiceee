@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<h1 align="center">reg page</h1>
+<style>
+body{
+text-align:"center";
+background-color:hotpink;
+}
+.f1container{
+display:flex;
+flex-direction:column;
+background-color:yellow;
+margin:auto;
+border:10px groove cyan;
+width:30%;
+}
+.item{
+margin:8px;
+padding:7px;
+}
+.item:hover{
+background-color:cyan;
+}
+.bt{
+background-color:ivory;
+}
+</style>
+</head>
+<body>
+<form name="reg" action="" method="post">
+<div class="f1container">
+
+<div>
+<label class="item">USER</label>
+<input type="text" name="t1" class="item">
+</div>
+
+<div>
+<label class="item">pass</label>
+<input type="password" name="t2" class="item">
+</div>
+
+<div>
+<label class="item">retype pass</label>
+<input type="password" name="t3" class="item">
+</div>
+
+<div>
+<label class="item">mobile</label>
+<input type="text" name="t4" maxlength=10 class="item">
+</div>
+
+<div>
+<label class="item">zipcode</label>
+<input type="text" name="t5" class="item">
+</div>
+
+<div>
+<label class="item">address</label>
+<textarea rows=2 cols=10 name="t6" class="item">
+</textarea>
+</div>
+
+<div>
+<label class="item">state</label>
+<select name="s">
+<option value="select state">select state</option>
+<option value="ts">ts</option>
+<option value="ap">ap</option>
+</select>
+</div>
+
+<div>
+<label class="item">insert img</label>
+<input type="file" name="img" class="item">
+</div>
+
+<div>
+<label class="item">gender</label>
+<input type="radio" name="g" value="male" class="item">male
+<input type="radio" name="g" value="female" class="item">female
+</div>
+
+<div>
+<input type="checkbox" name="t9">agrreeee
+</div>
+
+<div>
+<input type="submit" value="SUBMIT" name="t10" class="item bt">
+<input type="reset" value="clear" name="t11" class="item bt">
+</div>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
